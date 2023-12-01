@@ -1,10 +1,9 @@
 package com.github.ageresgit.server.weather;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 import com.github.ageresgit.common.model.WeatherData;
 import com.github.ageresgit.server.geography.GeoPosition;
 import com.github.ageresgit.server.weather.mappers.Mapper2WeatherData;
-import com.github.ageresgit.server.weather.mappers.MapperYandexWeather2WeatherData;
 import com.github.ageresgit.server.weather.model.YandexWeatherData;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

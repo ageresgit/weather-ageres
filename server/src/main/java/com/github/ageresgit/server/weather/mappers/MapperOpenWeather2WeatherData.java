@@ -15,7 +15,7 @@ public class MapperOpenWeather2WeatherData implements Mapper2WeatherData<OpenWea
     }
 
     @Override
-    public Class fromClass() {
+    public Class<?> fromClass() {
         return OpenWeatherData.class;
     }
 }

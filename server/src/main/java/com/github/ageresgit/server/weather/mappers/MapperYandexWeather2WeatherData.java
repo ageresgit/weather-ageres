@@ -4,9 +4,7 @@ import com.github.ageresgit.common.model.WeatherData;
 import com.github.ageresgit.server.weather.model.NumberFormatConfig;
 import com.github.ageresgit.server.weather.model.YandexWeatherData;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-import java.text.DecimalFormat;
 
 @Component
 public class MapperYandexWeather2WeatherData implements Mapper2WeatherData<YandexWeatherData> {
@@ -16,7 +14,7 @@ public class MapperYandexWeather2WeatherData implements Mapper2WeatherData<Yande
     }
 
     @Override
-    public Class fromClass() {
+    public Class<?> fromClass() {
         return YandexWeatherData.class;
     }
 }

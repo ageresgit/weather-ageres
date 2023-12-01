@@ -3,9 +3,7 @@ package com.github.ageresgit.server.weather;
 import com.github.ageresgit.common.model.WeatherData;
 import com.github.ageresgit.server.geography.GeoPosition;
 import com.github.ageresgit.server.weather.mappers.Mapper2WeatherData;
-import com.github.ageresgit.server.weather.mappers.MapperYandexWeather2WeatherData;
 import com.github.ageresgit.server.weather.model.OpenWeatherData;
-import com.github.ageresgit.server.weather.model.YandexWeatherData;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +24,10 @@ import java.util.Objects;
 public class GeoWeatherServiceOpenWeather implements GeoWeatherService {
 
     private final Logger log = LogManager.getLogger(GeoWeatherServiceOpenWeather.class);
-    private String host;
+    private final String host;
     private final String token;
-    private RestTemplate restTemplate;
-    private Mapper2WeatherData<OpenWeatherData> mapper2WeatherData;
+    private final RestTemplate restTemplate;
+    private final Mapper2WeatherData<OpenWeatherData> mapper2WeatherData;
 
     GeoWeatherServiceOpenWeather(RestTemplate restTemplate,
                                  @Value("${weather.service.openweather.host}") String host,
